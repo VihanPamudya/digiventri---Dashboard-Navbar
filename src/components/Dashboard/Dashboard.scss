@@ -1,0 +1,251 @@
+@import "../../../Theme.scss";
+
+.dashboard {
+    width: 90%;
+    min-height: max-content;
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .dashboard_container {
+        @include flexbox;
+
+        .dashboard_button {
+            outline: none;
+            padding: 8px 10px;
+            background-color: $orange;
+            color: $white;
+            border: 2px solid $orange;
+            border-radius: 100px;
+            font-size: $font-small;
+            font-weight: 600;
+            transition: all 0.5s ease-in-out;
+            width: 230px;
+            cursor: pointer;
+        }
+
+        .dashboard_button:hover {
+            cursor: pointer;
+            border: 2px solid $orange;
+            color: $orange;
+            background-color: hsla(0, 0%, 100%, 0.3);
+        }
+        .middle {
+            width: calc(100% - 360px);
+            @include flexbox;
+            justify-content: flex-end;
+        }
+        .dashboard_searchbar {
+            width: 550px;
+            margin: 0px auto;
+            @include flexbox;
+            position: relative;
+
+            input {
+                @include searchbox;
+                padding-right: 35px;
+            }
+
+            .search_icon {
+                position: absolute;
+                right: 30px;
+                color: #636363;
+            }
+        }
+
+        .browser-default {
+            @include textbox;
+            font-size: 13px;
+        }
+    }
+    .dashboard_home {
+        margin-top: 70px;
+
+        .dashboard_table {
+            border-top: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+            th {
+                color: $blue;
+                font-size: 13px;
+            }
+
+            td {
+                color: $grey;
+                font-size: $font-extra-small;
+            }
+
+            .column_1 {
+                padding-left: 20px;
+            }
+
+            .column_2 {
+                padding-left: 24%;
+            }
+
+            .dot_icon {
+                color: $grey;
+                font-size: $font-extra-small;
+            }
+        }
+    }
+
+    .create_popup {
+        width: 90%;
+        margin: 0px auto;
+        @include flexbox;
+        align-items: flex-start;
+
+        .popup_container {
+            width: 600px;
+            height: 100%;
+            padding: 20px;
+            border: 3px solid rgba($color: $orange, $alpha: 0.2);
+
+            .popup_heading {
+                color: $blue;
+                font-weight: 400;
+                font-size: $font-small;
+            }
+
+            .popup_topic {
+                width: 100%;
+                @include flexbox;
+
+                h2 {
+                    color: $orange;
+                    margin-top: 0px;
+                    font-size: $font-large;
+                }
+            }
+
+            .popup_title {
+                margin: 10px 0px;
+                .title_input {
+                    width: 92%;
+                    height: 13px;
+                    padding: 10px 20px;
+                    border: 1px solid rgba($color: $grey, $alpha: 0.4);
+                    border-radius: 20px;
+                    font-size: $font-small;
+                    color: $grey;
+                    margin-top: 10px;
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $orange;
+                    }
+                }
+            }
+
+            .popup_inventory {
+                margin: 10px 0px;
+
+                .popup_inventory_subtopics {
+                    @include flexbox;
+                    position: relative;
+                    padding-top: 10px;
+
+                    p {
+                        width: 100%;
+                        color: $grey;
+                        font-size: $font-extra-small;
+                    }
+                }
+
+                .date_input {
+                    @include inventorybox;
+                }
+
+                .quantity_input {
+                    @include inventorybox;
+                    margin-left: 10px;
+                }
+
+                .unitcost_input {
+                    @include inventorybox;
+                    margin-left: 10px;
+                }
+            }
+
+            .popup_search {
+                .popup_searchbar {
+                    width: 550px;
+                    margin: 0px auto;
+                    @include flexbox;
+                    position: relative;
+
+                    .share_input {
+                        width: 92%;
+                        height: 13px;
+                        padding: 10px 20px;
+                        border: 1px solid rgba($color: $grey, $alpha: 0.4);
+                        border-radius: 20px;
+                        font-size: $font-small;
+                        color: $grey;
+                        margin-top: 10px;
+                        &:focus {
+                            outline: none;
+                            border: 1px solid $orange;
+                        }
+                    }
+
+                    .search_icon {
+                        position: absolute;
+                        right: 20px;
+                        top: 20px;
+                        color: $grey;
+                    }
+                }
+            }
+
+            .popup_box {
+                margin: 0px auto;
+                @include flexbox;
+                align-items: flex-start;
+                margin-top: 15px;
+
+                .popup_search_box {
+                    width: 98%;
+                    height: 100px;
+                    padding: 20px;
+                    border: 2px solid rgba($color: $grey, $alpha: 0.2);
+
+                    .search_box {
+                        width: 100%;
+                        @include flexbox;
+
+                        p {
+                            padding-left: 10px;
+                            padding-top: 15px;
+                            color: $grey;
+                        }
+                    }
+                }
+            }
+            .popup_button {
+                padding-top: 30px;
+                @include flexbox;
+
+                .popup_create_button {
+                    outline: none;
+                    padding: 8px 10px;
+                    background-color: $orange;
+                    color: $white;
+                    border: 2px solid $orange;
+                    border-radius: 100px;
+                    font-size: $font-small;
+                    font-weight: 600;
+                    transition: all 0.5s ease-in-out;
+                    width: 140px;
+                    cursor: pointer;
+                }
+
+                .popup_create_button:hover {
+                    cursor: pointer;
+                    border: 2px solid $orange;
+                    color: $orange;
+                    background-color: hsla(0, 0%, 100%, 0.3);
+                }
+            }
+        }
+    }
+}

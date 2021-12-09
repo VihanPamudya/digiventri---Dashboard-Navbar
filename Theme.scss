@@ -1,0 +1,68 @@
+//Colors
+$orange: #f07f08;
+$blue: #211b4b;
+$grey: #636363;
+
+$white: #ffffff;
+$black: #000000;
+
+//FontSize
+$font-light: 10px;
+$font-extra-small: 12px;
+$font-small: 14px;
+$font-medium: 16px;
+$font-large: 18px;
+$font-extra-large: 20px;
+
+//Mixins
+//? Flexbox
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textbox {
+  width: 240px;
+  height: 40px;
+  padding: 10px 20px;
+  border: 1px solid rgba($color: $grey, $alpha: 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  color: $grey;
+  &:focus {
+    outline: none;
+    border: 1px solid $orange;
+  }
+}
+
+@mixin searchbox {
+  width: 200px;
+  height: 18px;
+  padding: 10px 20px;
+  margin-bottom: 0px;
+  border: 1px solid rgba($color: $grey, $alpha: 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  color: $grey;
+  &:focus {
+    outline: none;
+    border: 1px solid $orange;
+  }
+}
+
+@mixin inventorybox {
+  width: 134px;
+  height: 13px;
+  padding: 10px 20px;
+  border: 1px solid rgba($color: $grey, $alpha: 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  color: $grey;
+  margin-top: 5px;
+  &:focus {
+    outline: none;
+    border: 1px solid $orange;
+  }
+}
